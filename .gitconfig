@@ -1,0 +1,18 @@
+[user]
+	name = "Hat Dao"
+	email = "enjoy3013@gmail.com"
+[github]
+	user = enjoy2000
+[core]
+	editor = vim
+	excludesfile = /Users/hatdao/.gitignore_global
+[color]
+	ui = true
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
