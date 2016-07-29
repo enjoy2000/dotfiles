@@ -87,6 +87,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias plist='git reset Grabit/Supporting\ Files/Info.plist'
 alias cp_plist='cp ~/Documents/Info-dev.plist Grabit/Supporting\ Files/Info.plist'
+alias ll='ls -al'
 
 eval "$(rbenv init -)"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
+
+source /usr/local/bin/virtualenvwrapper.sh
+
