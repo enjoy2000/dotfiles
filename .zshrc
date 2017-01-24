@@ -1,14 +1,13 @@
 # Path to your oh-my-zsh installation.
+# 
 export ZSH=/Users/hatdao/.oh-my-zsh
-
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/workspaces
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
+# ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,12 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias plist='git reset Grabit/Supporting\ Files/Info.plist'
-alias cp_plist='cp ~/Documents/Info-dev.plist Grabit/Supporting\ Files/Info.plist'
 alias ll='ls -al'
 
 eval "$(rbenv init -)"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
+export LC_ALL="en_US.utf-8"
 
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="/Users/hatdao/.sdkman"
+# [[ -s "/Users/hatdao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hatdao/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
