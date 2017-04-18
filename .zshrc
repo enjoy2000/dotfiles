@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 # 
+# 
 export ZSH=/Users/hatdao/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -55,7 +56,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rbenv/bin:$PATH"
+#export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rbenv/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -97,3 +98,7 @@ export LC_ALL="en_US.utf-8"
 # [[ -s "/Users/hatdao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hatdao/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PATH="/usr/local/sbin:$PATH"
