@@ -1,3 +1,4 @@
+#
 # Path to your oh-my-zsh installation.
 # 
 # 
@@ -86,18 +87,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -al'
+alias clean_merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias django='python manage.py'
+alias clean_xcode='rm -rf /Users/hatdao/Library/Developer/Xcode/DerivedData'
 
 eval "$(rbenv init -)"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
-# source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/workspaces/.virtualenvs
+export PROJECT_HOME=$HOME/workspaces
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+
+source /usr/local/bin/virtualenvwrapper.sh
 export LC_ALL="en_US.utf-8"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # export SDKMAN_DIR="/Users/hatdao/.sdkman"
 # [[ -s "/Users/hatdao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hatdao/.sdkman/bin/sdkman-init.sh"
 
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+export ANDROID_HOME=${HOME}/Library/Android/sdk
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
