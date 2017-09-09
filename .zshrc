@@ -2,7 +2,7 @@
 # Path to your oh-my-zsh installation.
 # 
 # 
-export ZSH=/Users/hatdao/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -94,10 +94,10 @@ alias clean_xcode='rm -rf /Users/hatdao/Library/Developer/Xcode/DerivedData'
 eval "$(rbenv init -)"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
-export WORKON_HOME=$HOME/workspaces/.virtualenvs
-export PROJECT_HOME=$HOME/workspaces
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME
+export VIRTUALENVWRAPPER_PYTHON=`which python3`
+export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 source /usr/local/bin/virtualenvwrapper.sh
@@ -113,3 +113,5 @@ export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="/usr/local/sbin:$PATH"
+
+. $HOME/.shellrc.load
